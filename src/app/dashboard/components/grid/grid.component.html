@@ -1,0 +1,7 @@
+<div class="p-grid">
+  <div *ngFor="let session of sessions" class="p-col">
+    <app-pie-chart [session]="session" [events]="eventsSubject.asObservable()"></app-pie-chart>
+  </div>
+</div>
+
+<button pButton type="button" label="Connect" (click)="connect()"></button>

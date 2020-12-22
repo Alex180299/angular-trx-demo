@@ -17,6 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "chart.js",
+              "sockjs-client",
+              "stompjs"
+            ],
             "outputPath": "dist/ksTest",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -28,7 +33,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "src/styles.scss",
+              "./node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           },
@@ -91,6 +100,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -124,5 +134,8 @@
       }
     }
   },
-  "defaultProject": "ksTest"
+  "defaultProject": "ksTest",
+  "cli": {
+    "analytics": false
+  }
 }
